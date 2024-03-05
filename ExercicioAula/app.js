@@ -1,232 +1,160 @@
 /*
-01 - No index.html deste diretório (exercicio-02):
+01 - No index.html deste diretório (exercicio-03):
 
-- Declare uma marcação HTML;
-- Modifique a linguagem para português do Brasil;
-- Remova as meta tags desnecessárias;
-- Modifique o title para "Exercício 02";
-- E linke este arquivo, app.js, antes do fechamento da tag body.
+- Declare uma marcação HTML básica;
+- Linke este arquivo, app.js;
+- Inicie o seu servidor local e abra o console do browser.
 */
-//Feito
+//feito
 /*
-02 - Inicie o seu servidor local e abra o console do browser.
+02 - Armazene um array vazio em uma let "brazilianFoods";
 */
-//Feito
-/*
-03 - Exiba a string 'Grandes poderes trazem grandes responsabilidades.' no console do browser.
 
-Utilize os espaços entre os comentários abaixo para executar os códigos dos exercícios. Inclusive este.
-*/
-let frase= "Grandes poderes trazem grandes responsabilidades."
-//console.log(frase)
+let brazilianFoods= []
 
 /*
-04 - Comente o console.log acima, e:
+03 - Use o método adequado para adicionar os 3 seguintes itens ao array:
 
-- Armazene a palavra 'Tom' em uma constante "tom";
-- Armazene a palavra 'Hanks' em uma constante "firstTom";
-- Armazene a palavra 'Cruise' em uma constante "secondTom";
-- Declare uma constante "myFavoriteTom" que recebe nome, espaço, e sobrenome do Tom que você mais gosta;
-- Exiba a "myFavoriteTom" no console do browser.
+- Coxinha
+- null
+- Brigadeiro
+
+- Exiba a brazilianFoods no console.
 */
-const tom= "Tom "
-const firstTom= "Hanks"
-const secondTom= "Cruise"
-const myFavoriteTom= tom + secondTom
-//console.log(myFavoriteTom)
 
-
+const adicionarItens= brazilianFoods.push('Coxinha',null,'Brigadeiro')
+console.log(adicionarItens)
 /*
-05 - Comente o console.log acima, e:
+04 - Comente o console.log acima e:
 
-- Armazene a palavra 'JavaScript' em uma constante "programmingLanguage";
-- Armazene a junção das letras "J" e "S", da programmingLanguage, em uma constante "js";
-- As letras não devem ser digitadas manualmente;
-- Exiba a "js" no console do browser;
+- Através de uma reatribuição de valor, faça com que o 2º item do  
+array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
+- Exiba apenas o 2º item desse array no console.
 */
-const programmingLanguage= 'JavaScript'
-const js= programmingLanguage[0]+programmingLanguage[4]
-//console.log(js)
+brazilianFoods[1]= "Pão de Queijo"
+console.log(brazilianFoods[1])
 
 
 /*
-06 - Comente o console.log acima, e,
+05 - Comente o console.log acima e:
 
-- Armazene, em uma constante "mdn", a junção das letras iniciais das 3 palavras que a constante "mozilla" armazena;
-- As iniciais não devem ser digitadas manualmente;
-- Exiba a "mdn" no console do browser;
+- Armazene em uma const "foodsInfo" a seguinte string: "Até aqui, o  
+array "brazilianFoods" possui NUMERO_DE_ITENS itens: NOME_DO_ITEM_1,  
+NOME_DO_ITEM_2 e NOME_DO_ITEM_3.";                               
+- Substitua "NUMERO_DE_ITENS" pelo valor correto, mas sem inserir o  
+número diretamente;
+- Substitua as palavras "NOME_DO_ITEM_X" pelas informações corretas,  
+mas sem digitar os nomes das comidas diretamente;
+- Exiba a foodsInfo no console.
 */
 
-const mozilla = 'Mozilla Developer Network'
-const mdn= mozilla[0]+mozilla[8]+mozilla[18]
-//console.log(mdn)
+const foodsInfo= 'Até aqui, o array \"brazilianFoods"\ possui NUMERO_DE_ITENS itens: NOME_DO_ITEM_1, NOME_DO_ITEM_2 e NOME_ITEM_X.'
+console.log(foodsInfo.indexOf('array'))
+console.log(`${foodsInfo.slice(0, foodsInfo.indexOf('NUMERO_DE_ITENS'))}${brazilianFoods.length} itens: ${brazilianFoods.toString()}.`)
 
 /*
-07 - Comente o console.log acima, e,
+06 - Comente o console.log acima e:
 
-- Exiba no console do browser a quantidade de caracteres que a constante "programmingLanguage" possui;
+- Armazene um array com os itens "Chico" e "Zeca" em uma const  
+"maleDogNames";
+- Agora, em uma const "femaleDogNames", armazene um array com os  
+itens "Lilica" e "Matilda";
+- Declare uma let "dogNames" que recebe a junção dos arrays  
+"maleDogNames" e "femaleDogNames";
+- Exiba a "dogNames" no console.
 */
-//console.log(programmingLanguage.length);
 
+const maleDogNames= ['Chico','Zeca']
+const femaleDogNames= ['Lilica','Matilda']
+let dogNames= maleDogNames.concat(femaleDogNames)
+console.log(dogNames.toString(), dogNames.length)
 
 /*
-08 - Comente o console.log acima, e,
+07 - Comente o console.log acima e:
 
-- Exiba no console a última letra da string que a "randomWord" (abaixo) armazena, mas com a condição a seguir;
-- Ao invés de inserir manualmente a posição do último caractere, faça com que a obtenção da última letra funcione para qualquer palavra que a "randomWord" receber;
-- Dica: utilize a propriedade ".length".
+- Exiba no console uma string com todos os itens do array  
+"dogNames" separados por vírgula e espaço em branco;
+- Utilize o método adequado para fazer isso;
+- O resultado deve ser: "nome1, nome2, nome3, nome4".
 */
 
-let randomWord = 'Araponga'
-let indiceUltimoCarac=randomWord.length
-
-//console.log(randomWord[7]);
-/*
-09 - Comente o console.log acima, e,
-
-- Exiba, no console, a string que "summerMessage" (abaixo) armazena, mas com todas as letras minúsculas;
-- Não modifique a string da "summerMessage";
-- Não digite a nova string manualmente.
-*/
-
-const summerMessage = 'O VERÃO CHEGA NESTE FIM DE SEMANA'
-//console.log(summerMessage.toLowerCase())
+console.log(dogNames.join(', '))
 
 /*
-10 - Comente o console.log acima, e,
+08 - Comente o console.log acima e:
 
-- Exiba, no console, a string que "winterMessage" (abaixo) armazena, mas com todas as letras maiúsculas;
-- Não modifique a string da "winterMessage";
-- Não digite a nova string manualmente.
+- Exiba no console o último item do array "dogNames", mas de  
+forma que caso a quantidade de itens do array aumente ou diminua,  
+o último item continue sendo exibido;
+- Para testar essa lógica, na linha acima do console.log que  
+você acabou de escrever, remova o último item do array "dogNames"  
+utilizando o método adequado para isso;
+- O console deve continuar exibindo o último item do array, que  
+agora é "Lilica".
+[´poi uytree*/
+
+console.log(dogNames[dogNames.length - 1])
+// testanto
+dogNames.pop(dogNames[dogNames - 1])
+console.log(dogNames[dogNames.length - 1])
+/*
+09 - Comente o console.log acima e:
+
+- Adicione o item "Nina" no final do array "dogNames", utilizando  
+o método adequado para isso;
+- Agora, armazene em uma const "initials" uma template string com  
+apenas as letras iniciais dos nomes do array "dogNames";
+- Exemplo: ['Nala', 'Zé'] resultaria em uma string 'NZ';
+- Não digite as letras diretamente;
+- Exiba a "initials" no console.
 */
 
-const winterMessage = 'o inverno está chegando'
-//console.log(winterMessage.toLocaleUpperCase())
+dogNames.push('Nina')
+const initials= `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[3][0]}`
+console.log(initials)
 
 /*
-11 - Comente o console.log acima, e,
+10 - Comente o console.log acima e:
 
-- Exiba, no console, o index do caractere "v" da "winterMessage";
+- Exiba a "initials" no console, mas com todas as letras minúsculas;
+- Utilize o método adequado para isso.
 */
 
-//console.log(winterMessage.indexOf('v'))
+console.log(initials.toLocaleLowerCase())
 
 /*
-12 - Comente o console.log acima, e,
+11 - Comente o console.log acima e:
 
-- Exiba, no console, o index da última ocorrência do caractere "n" da "winterMessage".
+- Declare uma const "dessert" e faça com que ela receba uma template  
+string que contém a parte "co" do 1º item do array "dogNames", a  
+parte "ca" do 2º item e a parte "na" do 4º item;
+- A string deve resultar na palavra 'cocana', que não deve ser  
+digitada diretamente;
+- No final da string, faça com que a letra "n" seja substituída por  
+"d", utilizando o método adequado para isso;
+- Exiba no console a string abaixo, substituindo "SOBREMESA" pela  
+constante que você criou.
+
+'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
 */
 
-//console.log(winterMessage.lastIndexOf('n'))
+const dessert= `${dogNames[0].slice(-2)+ dogNames[1].slice(-2)+ dogNames[3].slice(-2)}`
+console.log(dessert)
+console.log(dessert.replace('n','d'))
+console.log(`A ${dessert.replace('n', "d")} é um doce à base de coco, tradicional na América Latina e em Angola.`)
 
 /*
-13 - Comente o console.log acima, e,
+12 - Comente o console.log acima e:
 
-- Após a const "harryPotterAuthor" (abaixo), exiba no console a parte "J.K." da string "harryPotterAuthor";
-- Não digite a string "J.K." manualmente;
+- Declare um array com os números 3, 5, e 7 e o armazene em uma let  
+"oddNumbers";
+- Exiba no console o resultado do 2º item do array elevado ao cubo. O  
+valor exibido deve ser 125;
+- Entre a declaração da "oddNumbers" e a exibição do 2º item do array  
+elevado ao cubo, faça o 2º item do array receber todo o valor que ele  
+já tem, mais 4;
+- Agora, o resultado exibido no console deve ser 729.
 */
-
-const harryPotterAuthor = 'J.K. Rowling'
-//console.log(harryPotterAuthor.slice(0,4))
-
-/*
-14 - Comente o console.log acima, e,
-
-- Após a const "bestMovie" (abaixo), declare uma constante "realBestMovie";
-- Atribua à "realBestMovie" a mesma string da "bestMovie", mas substituindo o nome do filme para "Moonlight";
-- Exiba a "realBestMovie" no console.
-*/
-
-const bestMovie = 'E o Oscar de melhor filme vai para: "La la land"!'
-const realBestMovie= bestMovie.replace('La la land','Moonlight')
-//console.log(realBestMovie)
-
-/*
-15 - Comente o console.log acima, e,
-
-- Abaixo deste comentário, armazene o resto de 10 dividido por 3 em uma constante "reminder";
-- Exiba a reminder no console. O resultado deve ser 1;
-*/
-const reminder=10 % 3
-//console.log(reminder)
-
-/*
-16 - Comente o console.log acima, e,
-
-- Abaixo da let "episodes", incremente o valor dela em 1;
-- Após o incremento, exiba a let "episodes" no console;
-- O valor exibido no console deve ser 7.
-*/
-
-let episodes = 6
-//console.log(++episodes)
-
-
-/*
-17 - Comente o console.log acima, e,
-
-- Decremente a let "episodes" em 1;
-- Após o decremento, exiba a let "episodes" no console;
-- O valor exibido no console deve ser 6.
-*/
-
-//console.log(--episodes)
-
-
-/*
-18 - Comente o console.log acima, e,
-
-- Utilize o operador addition assignment para atualizar o valor da let "episodes" para 10;
-- Após a atribuição, exiba a let "episodes" no console.
-*/
-//console.log(episodes+=10)
-
-
-/*
-19 - Comente o console.log acima, e,
-
-- Abaixo deste comentário, armazene a string 'O nº de episódios é: NUMERO_DE_EPISÓDIOS' em uma constante "allEpisodes";
-- Insira a let "episodes" no lugar de "NUMERO_DE_EPISÓDIOS";
-- Exiba a "allEpisodes" no console.
-*/
-
-const allEpisodes='O nº de episódios é: NUMERO_DE_EPISÓDIOS'
-//console.log(allEpisodes.replace('NUMERO_DE_EPISÓDIOS',episodes))
-
-/*
-20 - Comente o console.log acima, e,
-
-- Descomente a const "bookMessage" e o console.log abaixo;
-- Encontre uma forma de incluir as aspas simples do nome do livro na string;
-- Não modifique nenhuma aspas da string para aspas duplas.
-- Não use template strings.
-*/
-
-const bookMessage = '\'O Conto da Aia\' é um dos livros mais vendidos da década.'
-//console.log(bookMessage)
-
-/*
-21 - Comente o console.log acima (e a const bookMessage caso não tenha descoberto a resolução), e,
-
-- Após a const "name" (abaixo), declare uma let "newName";
-- A let "newName" deverá armazenar uma string ES5 com o mesmo valor que "name" armazena;
-- Só que com as letras iniciais do nome e sobrenome maiúsculas;
-- Não digite a nova string manualmente.
-- Não modifique a string da const "name";
-- Exiba a "newName" no console;
-*/
-
-const name = 'walter white'
-let newName= name[0].toUpperCase() + name.slice(1,6)+' '+ name[7].toUpperCase() + name.slice(8,12)
-//console.log(newName)
-
-/*
-22 - Comente o console.log acima, e,
-
-- Atribua à "newName" uma template string;
-- A template string deverá resultar no mesmo valor que a "newName" tinha anteriormente (nome e sobrenome com letras iniciais maiúsculas);
-- Não digite a nova string manualmente.
-- Não modifique a string da const "name";
-- Exiba a "newName" no console;
-*/
-//console.log(`${name[0].toUpperCase}${name.slice(1,6)}${name[7].toUpperCase()}${name.slice(8,12)}`)
+let oddNumbers = [3,5,7]
+oddNumbers[1]+= 4
+console.log(oddNumbers[1]**3)
